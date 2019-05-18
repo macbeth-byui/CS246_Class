@@ -93,7 +93,7 @@ A Map is like a List in that they are both containers that hold data.  To get so
 
 **JavaDoc**
 
-If you write comments using the JavaDoc format, you can generate JavaDoc html files from it.  In IntelliJ, 
+If you write comments using the JavaDoc format, you can generate JavaDoc html files from it.  In IntelliJ, goto menu option Tools and select Generate JavaDoc.  We will explore this later in the semester.
 
 **Reusable Code**
 
