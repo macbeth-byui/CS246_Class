@@ -1,12 +1,8 @@
 package macbeth.workerapp;
 
-import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
         job1.start();
         job2.start();
         job3.start();
-        job4.start();*/
+        job4.start();
 
         // Proper way to use Thread with Android
-        /*
+
         Job2 job1 = new Job2(20, this);
         Job2 job2 = new Job2(30, this);
         Job2 job3 = new Job2(40, this);
@@ -38,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         job4.start();*/
 
         // Another approach using AsyncTask
+
         Job3 job1 = new Job3(20, this);
         Job3 job2 = new Job3(30, this);
         Job3 job3 = new Job3(40, this);
