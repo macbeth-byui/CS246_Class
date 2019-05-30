@@ -35,17 +35,21 @@ Here are 2 use cases that are common:
 * Existing Project - Select "Checkout from Version Control", and then select "git", and then specify the Github repository that you want to open.
 
 **Git Troubleshooting**
+
 If you are running into git problems using IntelliJ, you may want to try to do the actions from the command line.  Rely on "git status" to see what is going on.  If you are on the command line, git will frequently give you hints about what needs to be done to solve the problem.
 
 **What can be stored in Git**
+
 Normally, we store code files in git.  However, you can store any file including requirements documents, design diagrams, user guides, and test cases.
 
 **Security**
+
 If you have a public repository, then everyone in the world will see your code.  However, they won't be able to change your code.  They can clone your repository and change it in their own repository.
 
 If you want to keep your code secure, put it into a private repository.  You CS246 android app should be put into a private repository with your entire team and the teacher as collaborators.
 
 **Branching & Merging**
+
 Branching is useful in the following scenarios:
 * Usually each software bug or new feature is assigned a change control ID so that the team can control changes made to the software.  In this type of environment, a separate branch would be created for each approved change.  The engineer would test and branch and do a rebase to integrate it with the master branch.  When the change was fully tested, the branch would be merged in.
 * If you wanted to prototype an idea, you could create a branch to work on the idea seperate from the rest of the project.  Occasionally, you would rebase to keep your mini-project in synch with the master branch.  If desired, the prototype idea could be merged into the master.
