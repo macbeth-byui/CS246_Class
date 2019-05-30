@@ -58,6 +58,8 @@ There is another way to do this.  Your Activity class can implement the OnClickL
 1) Implement the onClick function in your class
 2) Tell the button that you want your class to respond to the button click
 
+The following code provides an example of implementing the OnClickListener for option 2 above:
+
     public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
