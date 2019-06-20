@@ -9,7 +9,7 @@ import java.net.URL;
 import java.util.*;
 
 public class WeatherManager {
-    private final String key = "3cdb5f940155747817fa162765ae2a6b";
+    private final String key = "PUT YOUR KEY HERE";
     private final String baseUrl = "https://api.openweathermap.org/data/2.5/";
     private Gson gson;
     private List<WeatherForecastSummary> summaries;
