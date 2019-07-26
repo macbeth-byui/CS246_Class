@@ -121,7 +121,9 @@ The RecyclerView was recently put into Android to provide better performance and
             // Connect the data (the text in our data list) to the TextView's in the
             // the ViewHolder.  Remember that the ViewHolder contains the data for a 
             // single row in the list.
-            viewHolder.getField().setText("Info: " + data.get(itemNum).getInfo());
+            viewHolder.getInfoField().setText("Info: " + data.get(itemNum).getInfo());
+            viewHolder.getStatusField().setText("Status: " + data.get(itemNum).getStatus());
+            viewHolder.getErrorField().setText("Error: " + data.get(itemNum).getError());
         }
 
         @Override
@@ -132,27 +134,27 @@ The RecyclerView was recently put into Android to provide better performance and
         // This class will be used to create an object for each row in the list
         // The contents of each TextView will be remembered.
         public class ViewHolder extends RecyclerView.ViewHolder {
-            private TextView field1;
-            private TextView field2;
-            private TextView field3;
+            private TextView infoField;
+            private TextView statusField;
+            private TextView errorField;
  
             public ViewHolder(View itemView) {
                 super(itemView);
-                field1 = itemView.findViewById(R.id.field1);  // These 3 fields are in the
-                field2 = itemView.findViewById(R.id.field2);  // my_item_layout (single row
-                field3 = itemView.findViewById(R.id.field3);  // of the list)
+                infoField = itemView.findViewById(R.id.infoField);      // These 3 fields are in the
+                statusField = itemView.findViewById(R.id.statusField);  // my_item_layout (single row
+                errorField = itemView.findViewById(R.id.errorField);    // of the list)
             }
 
-            public TextView getField1() {
-                return field1;
+            public TextView getInfoField() {
+                return infoField;
             }
 
-            public TextView getField1() {
-                return field1;
+            public TextView getStatusField() {
+                return statusField;
             }
 
-            public TextView getField2() {
-                return field2;
+            public TextView getErrorField() {
+                return errorField;
             }
 
 
