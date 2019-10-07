@@ -54,7 +54,7 @@ public class EarthquakeAnalyzer {
         // object of an interface, we have to supply a definition for the abstract function within it.  We call
         // this an anonymous class since we have the function implementation without giving a name to the class.
 
-        /*Collections.sort(eql.getEarthquakes(), new Comparator<EarthquakeEvent>() {
+        Collections.sort(eql.getEarthquakes(), new Comparator<EarthquakeEvent>() {
             @Override
             public int compare(EarthquakeEvent o1, EarthquakeEvent o2) {
                 // We are going to define earthquake comparisons by comparing their magnitudes.
@@ -63,7 +63,7 @@ public class EarthquakeAnalyzer {
                 // the 2 magnitudes.
                 return Float.compare(o1.getDetail().getMag(), o2.getDetail().getMag());
             }
-        });*/
+        });
 
         // There is another way we can do this.  We can create a lambda function (a function that has no name) that
         // will be interpreted as the compare function.  Our function still needs 2 parameters (o1 and o2) just like
