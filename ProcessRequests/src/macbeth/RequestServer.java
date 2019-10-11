@@ -1,30 +1,35 @@
 package macbeth;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class RequestServer {
+public class RequestServer extends Thread {
     private List<String> requests;
+    private boolean running;
 
     public RequestServer() {
-        requests = new ArrayList<String>();
+        requests = Collections.synchronizedList(new ArrayList<String>());
+        running = false;
     }
 
     public void exit() {
-
+        running = false;
     }
 
     public void run() {
+        running = true;
         Random random = new Random();
         try {
-            while (true) {
-                Thread.sleep(random.nextInt(3000));
+            while (running) {
+                Thread.sleep(random.nextInt(10));
                 requests.add(new String("REQ-"+random.nextInt(10000)));
             }
         }
         catch (InterruptedException ie) {
         }
+        System.out.println("Exiting Server");
     }
 
     public String getNextRequest() {
@@ -37,9 +42,13 @@ public class RequestServer {
     public void displayRequests() {
         System.out.println("Requests:");
         int i=1;
-        for (String request : requests ) {
-            System.out.println(i+": "+request);
-            i++;
+        // When using Collections.synchronizedList, any iteration
+        // through that list must be in a synchronized block:
+        synchronized (requests) {
+            for (String request : requests) {
+                System.out.println(i + ": " + request);
+                i++;
+            }
         }
         System.out.println("--END--");
     }
