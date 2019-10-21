@@ -7,9 +7,11 @@ import java.util.Random;
 
 public class RequestServer extends Thread {
     private List<String> requests;
+    private MainActivity activity;
 
-    public RequestServer() {
+    public RequestServer(MainActivity activity) {
         requests = Collections.synchronizedList(new ArrayList<String>());
+        this.activity = activity;
     }
 
     /**
@@ -23,6 +25,12 @@ public class RequestServer extends Thread {
                 requests.add(new String("REQ-"+random.nextInt(10000)));
 
                 // Update the Display to represent the modified request list
+                activity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        activity.updateDisplay();
+                    }
+                });
             }
         }
         catch (InterruptedException ie) {
@@ -48,6 +56,7 @@ public class RequestServer extends Thread {
         String request = requests.remove(0);
 
         // Update the Display to represent the modified request list
+        activity.updateDisplay();
 
         return request;
     }
