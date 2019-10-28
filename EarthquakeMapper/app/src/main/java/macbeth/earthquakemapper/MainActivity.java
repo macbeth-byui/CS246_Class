@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.esri.arcgisruntime.geometry.Point;
 import com.esri.arcgisruntime.geometry.SpatialReferences;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private Button bRefresh;
     private MapView mMapView;
     private GraphicsOverlay mGraphicsOverlay;
+    private ProgressBar pb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         // Create objects for layout
         mMapView = findViewById(R.id.mapView);
         bRefresh = findViewById(R.id.b_refresh);
+        pb = findViewById(R.id.progressBar);
 
         // Setup the map
         setupMap();
@@ -140,8 +143,19 @@ public class MainActivity extends AppCompatActivity {
     private void refreshMap() {
         clearGraphicsOverlay();
 
-        new RefreshMapTask(this).start();
+        new RefreshMapTask(this).execute("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson");
 
+        // Alternative Way using Threads:
+        //new RefreshMapTask(this).start();
+
+    }
+
+    public void disablePB() {
+        pb.setVisibility(View.INVISIBLE);
+    }
+
+    public void enablePB() {
+        pb.setVisibility(View.VISIBLE);
     }
 
 }
