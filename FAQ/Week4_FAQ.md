@@ -1,5 +1,7 @@
 **Git and Github Resources**
 
+Many companies use Git and GitHub (take a look at this site:   https://stackshare.io/github )
+
 In CS246, the most common commands that you will use are:
 
 * git clone - Copy a repository from Github to your computer.  If you have collaborator privileges, then you will be able to push changes.

@@ -5,6 +5,8 @@ API stands for Application Programming Interface.  An API can take many forms (y
 * Create a Class that has public functions that you can give to someone else to use.  The public functions are the API.  You can create a collection of classes and put the code into a JAR file.  You can give that JAR file to someone else.  You can also put the JAR file into a public repository like Maven (https://mvnrepository.com/).  API documents usually provide details about each function.  In Java, this is usually formatted by the JavaDoc tool.
 * Provide a web server that receives requests and provides responses.  The requests can be sent via HTTP (either GET or POST methods).  In the request, the user provides information stating what data they are looking for.  The format of the request is strict and described in API documents.  The response is also well formatted.  The most common formats to receive back are JSON or XML.  The user then writes code to parse these responses for further use.
 
+The API in this case is creating the correct URL to request information.  The response is JSON data that you convert to an object using GSON.  You convert it so you can do something with it (like display a temperature).
+
 There are many (many, many) API's available online for you to use (just google for it and you will probably find it).  Many social media companies have public API's.  Here is a website to browse:  https://www.programmableweb.com/apis/directory
 
 When you access an API via a web server, the data provider will frequently require you to have an API key.  The key is required for 2 reasons:
