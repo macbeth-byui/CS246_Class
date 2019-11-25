@@ -3,7 +3,8 @@ package macbeth;
 public class Main {
 
     public static void main(String[] args) {
-	    Config config = new Config();
+	    //Config config = new Config();
+        Config config = Config.getInstance();
 
 	    System.out.println("Contents of the file:");
 	    System.out.println(config.getConfigValue("IP"));

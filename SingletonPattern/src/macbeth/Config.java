@@ -4,19 +4,28 @@ import java.io.*;
 import java.util.TreeMap;
 
 public class Config {
+
+    private static Config config = null;
     private TreeMap<String, String> data;
 
-    public Config() {
+    private Config() {
         data = new TreeMap<String, String>();
 
         readFile();
     }
 
-    public String getConfigValue(String key) {
+    public static synchronized Config getInstance() {
+        if (config == null) {
+            config = new Config();
+        }
+        return config;
+    }
+
+    public synchronized String getConfigValue(String key) {
         return data.get(key);
     }
 
-    public void setConfigValue(String key, String value) {
+    public synchronized void setConfigValue(String key, String value) {
         data.put(key, value);
 
         writeFile();
