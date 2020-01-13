@@ -1,6 +1,7 @@
 package macbeth;
 
-public class Klingon extends FlyingObject implements Attackable, Radioactive, Cloakable {
+public class Klingon extends FlyingObject implements Attackable, Cloakable, Radioactive {
+
 
     @Override
     public void attack() {
@@ -8,12 +9,12 @@ public class Klingon extends FlyingObject implements Attackable, Radioactive, Cl
     }
 
     @Override
-    public void enable() {
+    public void cloakOn() {
 
     }
 
     @Override
-    public void disable() {
+    public void cloakOff() {
 
     }
 

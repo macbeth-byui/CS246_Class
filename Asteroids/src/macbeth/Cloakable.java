@@ -1,6 +1,6 @@
 package macbeth;
 
 public interface Cloakable {
-    public void enable();
-    public void disable();
+    public void cloakOn();
+    public void cloakOff();
 }
