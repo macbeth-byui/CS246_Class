@@ -370,7 +370,7 @@ IntelliJ (like other IDE's) will provide an auto-complete feature which contains
 
 **Memory in Java**
 
-In Java, objects are always created dynamically on the stack.  In C++, we had a choice whether we wanted to create something on the stack (which meant it went away when the function was done) or on the heap.  When an object is no longer being used, you don't have to "delete" the object.  The object will be automatically deleted in a process called garbage collection.  
+In Java, objects are always created dynamically on the heap.  In C++, we had a choice whether we wanted to create something on the stack (which meant it went away when the function was done) or on the heap.  When an object is no longer being used, you don't have to "delete" the object.  The object will be automatically deleted in a process called garbage collection.  
 
 When you pass objects in Java, you are passing the real object.  Its not a copy of the object.  Thankfully it passes just the address of the object so it doesn't take much time.  This is similar to the behavior of pass by reference in C++.  In reality, this is a little incorrect.  Technically it's more like passing a pointer by value in C++.  Since you have the address (the pointer) you can change the object. 
 
