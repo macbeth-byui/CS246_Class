@@ -57,6 +57,8 @@ catch (Exception e) {
 
 In the example above, notice that you can catch more than one Exception.  MyException was listed first since technically MyException "isa" an Exception.
 
+In Java, there are 2 types of Exceptions.  If you throw Exception or if you use your own class that inherited from Exception, then this must be caught.  If you throw a RuntimeException or if you use your own class that inherited RuntimeException, then this exception does not have to be caught in the code.  If the RuntimeException occurs, then the program will still stop.  The most common RuntimeException that you will see is the NullPointerException.
+
 **Variables in Java**
 
 In Java, all variables (native types or objects of classes), must be declared before they are used.  You should ensure that your variables are initialized before use.  You can initialize a variable of a class type to null if you don't want to create the object yet.
