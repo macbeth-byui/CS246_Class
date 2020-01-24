@@ -6,8 +6,9 @@ import java.util.*;
 
 public class Main {
 
-    public static void main(String [] args) {
-        //Collection<String> directory = new ArrayList<>();
+    public static void main(String []args) {
+
+        //Collection<String> directory = new ArrayList<String>();
         //Collection<String> directory = new LinkedList<>();
         //Collection<String> directory = new HashSet<>();
         Collection<String> directory = new TreeSet<>();
@@ -23,22 +24,26 @@ public class Main {
 
         //Map<String, User> directory2 = new HashMap<>();
         Map<String, User> directory2 = new TreeMap<>();
-        directory2.put("Bob",new User("Bob", 32, "555-1234"));
-        directory2.put("Sue",new User("Sue", 19, "555-2345"));
+
+        directory2.put("Bob",new User("Bob",20, "555-1234"));
+        directory2.put("Sue",new User("Sue", 25, "555-7890"));
+
+        System.out.println(directory2.get("Sue"));
 
         for (String key : directory2.keySet()) {
             System.out.println(key);
         }
-        for (User user : directory2.values()) {
-            System.out.println(user);
+
+        for (User value : directory2.values()) {
+            System.out.println(value);
         }
 
-        User user = new User("Tim", 50, "555-4534");
+        User u = new User("Tim", 50, "123-4567");
         Gson gson = new Gson();
-        String json = gson.toJson(user);
-        System.out.println(json);
-        User newUser = gson.fromJson(json, User.class);
-        System.out.println(newUser);
+        String jsonString = gson.toJson(u);
+        System.out.println(jsonString);
 
+        User u2 = gson.fromJson(jsonString, User.class);
+        System.out.println(u2);
     }
 }
