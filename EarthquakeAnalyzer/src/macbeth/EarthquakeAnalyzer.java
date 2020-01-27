@@ -45,7 +45,17 @@ public class EarthquakeAnalyzer {
 
     public void displayEarthquakeData() {
         String data = loadWebData("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson");
-
+        Gson gson = new Gson();
+        EarthquakeList list = gson.fromJson(data, EarthquakeList.class);
+        Collections.sort(list.getEarthquakes(), new Comparator<EarthquakeEvent>() {
+            @Override
+            public int compare(EarthquakeEvent o1, EarthquakeEvent o2) {
+                return Float.compare(o1.getDetail().getMag(), o2.getDetail().getMag());
+            }
+        });
+        for (EarthquakeEvent e : list.getEarthquakes()) {
+            System.out.println(e);
+        }
     }
 
     public static void main(String[] args) {
