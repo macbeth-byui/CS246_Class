@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         // Create the Request Server first so we can create an adapter that will connect
         // the list in the Request Server to the ListView in the display
 
-        server = new RequestServer();
+        server = new RequestServer(this);
 
         // An ArrayAdapter is a very simple adapter that maps a list of Strings to a
         // ListView display
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         tvRequestCount.setText("0");
         tvProcessingRequest.setText("None");
 
-        // Start the Request Server Thread in the background
+        // Start the Request Serve server.start();r Thread in the background
         server.start();
     }
 

@@ -6,8 +6,9 @@ public class ProcessRequests {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         RequestServer server = new RequestServer();
-
-        server.run();
+        Thread t = new Thread(server);
+        t.start();
+        //server.start();
 
         String choice;
         do {

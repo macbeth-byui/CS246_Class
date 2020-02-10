@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private void load() {
         String nameValue = "";
         SharedPreferences sp = getSharedPreferences("Data", Context.MODE_PRIVATE);
-        nameValue = sp.getString("Name", "?");
+        nameValue = sp.getString("Name", "");
         etName.setText(nameValue);
         Log.d("sptest","Loaded Name: "+nameValue);
     }
