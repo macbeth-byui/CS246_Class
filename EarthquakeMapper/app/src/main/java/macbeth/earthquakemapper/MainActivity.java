@@ -146,6 +146,8 @@ public class MainActivity extends AppCompatActivity {
 
         new RefreshMapTask(this).execute("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson");
 
+        //new RefreshMapTask(this).start();
+
     }
 
     public void disablePB() {
