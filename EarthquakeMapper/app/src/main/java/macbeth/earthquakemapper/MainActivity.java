@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
     private void refreshMap() {
         clearGraphicsOverlay();
 
-        new RefreshMapTask(this).start();
+        new RefreshMapTask(this).execute("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson");
 
     }
 
