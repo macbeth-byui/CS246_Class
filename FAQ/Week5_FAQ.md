@@ -119,19 +119,21 @@ public void onClick(View view) {
 
 The 2nd option above an also be done with an anonymous class:
 
-    public class MainActivity extends AppCompatActivity {
-    
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        // ...
-        Button b = findViewById(R.id.b_send_msg);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Do Something
-            }
-        });
-    }
+```java
+public class MainActivity extends AppCompatActivity {
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    // ...
+    Button b = findViewById(R.id.b_send_msg);
+    b.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            // Do Something
+        }
+    });
+}
+```
 
 
 This pattern of implementing a listener that defines what you will do if something happens and then telling someone to use that listener (in this case, telling the button to use my implementation of onClick in my listener) is very common in Java and in other Object Oriented languages.  We will explore this more when we look at the Observer Design Pattern.
