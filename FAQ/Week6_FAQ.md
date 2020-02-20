@@ -314,3 +314,16 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
+**Android Permissions**
+
+There are 2 kinds of permissions in Android:
+
+* The phone owner has to specifically grant permission to do something (e.g. keep track of your location)
+* The phone owner has to accept a permission when they download an app (e.g. accessing the internet)
+
+These permissions need to be listed in the AndroidManifest.xml.  If you saw this error: "java.lang.SecurityException: Permission denied (missing INTERNET permission?)" in your logcat, then this should prompt to look at the android documentation about the INTERNET permission (https://developer.android.com/training/basics/network-ops/connecting).  Here is what you need in your manifest file:
+
+```
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
