@@ -30,7 +30,7 @@ public class AFDXPro  {
 
     @Override
     public String toString() {
-        return "AFDXPort{" +
+        return "AFDXPro{" +
                 "ip='" + ip + '\'' +
                 ", port=" + port +
                 ", vl=" + vl +
