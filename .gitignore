@@ -8,3 +8,4 @@ captures/
 .DS_Store
 out/
 target/
+*.yml
