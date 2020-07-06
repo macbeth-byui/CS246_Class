@@ -29,7 +29,11 @@ In the follow option, instead of implementing DataListener, a new
 DataListener object is created when addListener is called.
  */
 
-public class Client {
+public class Client implements DataListener{
+    @Override
+    public void dataReceived(String data) {
+
+    }
 
     private String name;
 
