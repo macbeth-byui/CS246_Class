@@ -1,3 +1,5 @@
+## CS 246 Week 4 Support Material
+
 **Examples and Videos**
 
 The following examples and videos support the material in Week 4.  Subsequent sections below provide additional information and examples for common questions that students encounter during this week.

@@ -1,3 +1,5 @@
+## CS 246 Week 1 Support Material
+
 **Examples and Videos**
 
 The following examples and videos support the material in Week 1.  Subsequent sections below provide additional information and examples for common questions that students encounter during this week.
