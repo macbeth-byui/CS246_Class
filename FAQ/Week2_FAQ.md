@@ -1,3 +1,13 @@
+**Examples and Videos**
+
+The following examples and videos support the material in Week 2.  Subsequent sections below provide additional information and examples for common questions that students encounter during this week.
+
+* Video: https://video.byui.edu/media/CS246+Week+2+Interfaces/1_tezex14a
+* Prove 02 UML: https://macbeth-byui.github.io/CS246/diagrams/prove-02_uml.html
+* Another Inheritance Example (Asteroids): https://github.com/macbeth-byui/CS246_Class/tree/master/Asteroids/src/macbeth
+* Teach 02 UML: https://macbeth-byui.github.io/CS246/diagrams/TA2_UML.html
+* Example of Extra Game of Life Feature (Sleeper): https://github.com/macbeth-byui/CS246_Class/tree/master/GameOfLife_Sleeper
+
 **The instanceof Operator**
 
 The `instanceof` operator is a handy tool in Java to help you identify if an object is of a certain type.  This can be used with interfaces and other base classes.  Most helpful is when you use this to see if an object has inherited from a base class or an interface.  With interfaces, it is common that classes that implement them are not related in any other way.  Other classes that receive objects can test whether the object has implemented an interface.  If you have the following code:

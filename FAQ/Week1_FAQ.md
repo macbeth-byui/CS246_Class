@@ -1,3 +1,11 @@
+**Examples and Videos**
+
+The following examples and videos support the material in Week 1.  Subsequent sections below provide additional information and examples for common questions that students encounter during this week.
+
+* Video: https://video.byui.edu/media/CS246+Week+1A+Intro+Java/0_0pzxzkz1
+* Hello World Code: https://github.com/macbeth-byui/CS246_Class/tree/master/HelloWorld/src/macbeth
+* Prove 01 UML: https://macbeth-byui.github.io/CS246/diagrams/CS246_Prove01.html
+
 **Exception Handling**
 
 When programming, you have to choose your error handling strategy:
