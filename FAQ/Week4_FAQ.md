@@ -203,6 +203,8 @@ Creating a file called .gitignore in your repository can allow you to specify wh
     .DS_Store
     out/
 
+When you use Android Studio and IntelliJ (along with other tools), the tool will frequently create a default .gitignore for you.  When you use a tool, you should let the tool generate the .gitignore for you.
+
 **Threading**
 
 Threading is used whenever you want to concurrently do 2 or more things in software.  Possible scenarios include:
