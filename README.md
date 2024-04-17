@@ -1,3 +1,5 @@
+NOTE: The Repository is for an old class and has been archived.
+
 Welcome to the CS246 Class at BYU-Idaho.  
 
 This repository contains classroom examples that are done throughout the semester.
